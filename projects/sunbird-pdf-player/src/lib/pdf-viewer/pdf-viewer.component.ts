@@ -102,8 +102,8 @@ export class PdfViewerComponent implements AfterViewInit {
       this.viewerApp.eventBus.on('pagesloaded', (data) => {
         setTimeout(() => {
           this.viewerApp.rotatePages(this.viewerService.rotation);
+          this.pagesLoadedCallback(data);
         }, 500);
-        this.pagesLoadedCallback(data);
         if (this.viewerApp?.page && this.viewerService.currentPagePointer) {
           this.viewerApp.page = this.viewerService.currentPagePointer;
         }

@@ -19,13 +19,44 @@ export class AppComponent implements OnInit {
       }
     }, ...this.pdfMetaDataConfig
   };
-  metadata: Metadata = {
-    compatibilityLevel: 4,
-    artifactUrl: 'https://ntpproductionall.blob.core.windows.net/ntp-content-production/content/assets/do_31291455031832576019477/b301b302_std_1_tamilenglish_lang_term-1_opt.pdf',
-    identifier: 'do_31291455031832576019477',
-    name: 'B301,B302_STD_1_TAMIL,ENGLISH_LANG_TERM 1_OPT',
-    streamingUrl: 'https://ntpproductionall.blob.core.windows.net/ntp-content-production/content/assets/do_31291458881611366418883/b331332333_std_5_mathssciencesocial_tm_term-1_opt.pdf',
-    pkgVersion: 1
+  metadata: any = {
+    "copyright": "compass",
+     "keywords": [
+        "cricket",
+        "skill",
+        "practice"
+     ],
+     "channel": "0138325860604395527",
+     "mimeType": "application/pdf",
+     "objectType": "Content",
+     "appIcon": "https://storageco.blob.core.windows.net/content-storage/content/do_1139111142120652801218/artifact/do_1139111177289891841219_1698134488590_cricket.thumb.jpg",
+     "primaryCategory": "Explanation Content",
+     "artifactUrl": "https://storageco.blob.core.windows.net/content-storage/content/assets/do_1139111142120652801218/cricket.pdf",
+     "contentType": "Resource",
+     "identifier": "do_1139111142120652801218",
+     "visibility": "Default",
+     "mediaType": "content",
+     "osId": "org.ekstep.quiz.app",
+     "languageCode": [],
+     "license": "CC BY 4.0",
+     "name": "Play Cricket",
+     "status": "Live",
+     "code": "37c19709-38e5-4744-9dc8-4dcd02c12d86",
+     "streamingUrl": "https://storageco.blob.core.windows.net/content-storage/content/assets/do_1139111142120652801218/cricket.pdf",
+     "createdOn": "2023-10-24T07:54:19.096+0000",
+     "copyrightYear": 2023,
+     "lastUpdatedOn": "2023-10-24T08:02:58.551+0000",
+     "creator": "CompassCreator",
+     "pkgVersion": 1,
+     "versionKey": "1698134506475",
+     "framework": "fracing_fw",
+     "createdBy": "1fc08c1b-39bb-4b53-a25d-12bf9ef99e4f",
+     "resourceType": "Learn",
+     "licenseDetails": {
+        "name": "CC BY 4.0",
+        "description": "CC BY 4.0"
+     },
+     "currentAttempt": 0
   };
   pdfMetadataEvents: object;
   pdfPlayerConfig: PlayerConfig = {
@@ -43,6 +74,8 @@ export class AppComponent implements OnInit {
   };
 
   ngOnInit(): void {
+    this.pdfPlayerConfig.config.pagesVisited = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,22];
+    console.log("pdfPlayerConfig", this.pdfPlayerConfig)
   }
 
 
